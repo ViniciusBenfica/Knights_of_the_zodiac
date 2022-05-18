@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-first-page',
-  templateUrl: './first-page.component.html',
-  styleUrls: ['./first-page.component.scss']
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss']
 })
-export class FirstPageComponent implements OnInit {
+export class SignUpComponent implements OnInit {
 
   name: string = ""
+  email: string = ""
   password: string = ""
 
   constructor() {
@@ -16,16 +17,18 @@ export class FirstPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(): void{
+  createUser(): void{
     var user = {
+      "id": 1,
       "name": this.name,
+      "email": this.email,
       "password": this.password,
     }
-    
-    
 
     this.name = ""
+    this.email = ""
     this.password = ""
+
 
   }
 
