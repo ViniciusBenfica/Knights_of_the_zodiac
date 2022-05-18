@@ -21,6 +21,7 @@ body{
     cursor: pointer;
     margin: 20px auto;
     font-size: 3.5rem;
+    background: linear-gradient(to right, rgb(21, 191, 197), rgb(6, 230, 163));
 }
 
 .image-title{
@@ -44,7 +45,7 @@ input{
     border-bottom: solid rgb(21, 191, 197) 2px;
 }
 
-@media(max-width: 1000px){
+/* @media(max-width: 1000px){
     html{
         font-size: 45% !important;
     }
@@ -60,4 +61,4 @@ input{
             width: 200px ; height: 170px ;
         }
     }
-}
+} */

@@ -7,26 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstPageComponent implements OnInit {
 
-  name: string = ""
-  password: string = ""
-
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  login(): void{
-    var user = {
-      "name": this.name,
-      "password": this.password,
-    }
-    
-    
-
-    this.name = ""
-    this.password = ""
-
   }
 
 }
