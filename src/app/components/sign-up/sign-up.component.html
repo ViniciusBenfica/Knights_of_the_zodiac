@@ -1,15 +1,13 @@
 <div>
-    <div [ngStyle]="{'margin-top': '100px'}" class="image-title">
-        <img src="/assets/dentist.png" />
-        <div [ngStyle]="{'font-size': '4rem', 'color': 'rgb(95, 95, 95)'}"><b>Find a dentist</b></div>
-        <div [ngStyle]="{'font-size': '2rem', 'color': 'rgb(60, 60, 60)'}">Thousands of professionals in one app.</div>
+    <div class="image-title">
+        <img src="/assets/horoscope.png" />
     </div>
 
-    <p [ngStyle]="{'font-size': '25px', 'color': 'rgb(21, 191, 197)', 'margin-top': '50px'}"><b>CREATE ACCOUNT</b></p>
+    <p [ngStyle]="{'font-size': '25px', 'color': 'rgb(21, 191, 197)'}"><b>CREATE ACCOUNT</b></p>
     <div><input placeholder="Name" type="text" [(ngModel)]="name"></div>
     <div><input placeholder="Email" type="text" [(ngModel)]="email"></div>
     <div><input placeholder="Password" type="password" [(ngModel)]="password"></div>
-    <div class="bnt"(click)="createUser()" [ngStyle]="{'background': 'linear-gradient(to right, rgb(21, 191, 197), rgb(6, 230, 163))'}"><b>Create</b></div>
+    <div class="bnt"(click)="createUser()"><b>Create</b></div>
 </div>
 
 
