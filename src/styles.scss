@@ -25,16 +25,8 @@ body{
 }
 
 .image-title{
-    width: 300px; height: 380px;
-    display: inline-block;
-    margin-top: 150px;
-
-    img{
-        width: 300px; height: 250px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
-
+    width: 300px;
+    margin: 70px auto;
 }
 
 input{

@@ -1,10 +1,9 @@
 <div>
-    <div [ngStyle]="{'margin-top': '100px'}" class="image-title">
-        <img src="/assets/Cavaleiros-do-zodiaco.webp" />
-        <div [ngStyle]="{'font-size': '4rem', 'color': 'rgb(95, 95, 95)'}"><b>What is your zodiac knight</b></div>
+    <div class="image-title">
+        <img src="/assets/horoscope.png" />
     </div>
 
-    <p [ngStyle]="{'font-size': '25px', 'color': 'rgb(21, 191, 197)', 'margin-top': '50px'}"><b>LOGIN ACCOUNT</b></p>
+    <p [ngStyle]="{'font-size': '25px', 'color': 'rgb(21, 191, 197)'}"><b>LOGIN ACCOUNT</b></p>
     <div><input placeholder="Name" type="text" [(ngModel)]="name"></div>
     <div><input placeholder="Password" type="password" [(ngModel)]="password"></div>
     <div class="bnt" (click)="login()" [ngStyle]="{'background': 'linear-gradient(to right, rgb(21, 191, 197), rgb(6, 230, 163))'}"><b>Login</b></div>
