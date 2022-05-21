@@ -7,13 +7,15 @@ import { FirstPageComponent } from './components/first-page/first-page.component
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
+import { HoroscopeComponent } from './components/horoscope/horoscope.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstPageComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    HoroscopeComponent
   ],
   imports: [
     BrowserModule,
