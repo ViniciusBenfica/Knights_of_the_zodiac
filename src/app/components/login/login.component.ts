@@ -21,8 +21,6 @@ export class LoginComponent implements OnInit {
       "name": this.name,
       "password": this.password,
     }
-    
-    
 
     this.name = ""
     this.password = ""

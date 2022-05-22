@@ -12,18 +12,7 @@
     <div class="div-signo">
         <p>QUAL SEU SIGNO?</p>
         <div class="signs">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
-            <img src="/assets/mapa-astral.jpg">
+            <img *ngFor="let signo of signos" (click)="goingToPage(signo)" src="/assets/{{signo}}.png">
         </div>
     </div>
     

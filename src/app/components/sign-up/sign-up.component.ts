@@ -28,13 +28,13 @@ export class SignUpComponent implements OnInit {
       "password": this.password,
     }
 
-    this.service.addUser(user).subscribe()
+    this.service.addUser(user).subscribe(item => {
+      if(item) this.router.navigate(["/"])
+    })
 
     this.name = ""
     this.email = ""
     this.password = ""
-
-    this.router.navigate(["/"])
 
   }
 

@@ -8,6 +8,7 @@ import { User } from '../components/interfaces/User';
 })
 export class ServiceService {
   private readonly APIURL = "http://localhost:8080/users"
+  private readonly APIHOROSCOPO = "https://sameer-kumar-aztro-v1.p.rapidapi.com/"
 
   constructor(private http: HttpClient) { }
 
@@ -17,6 +18,10 @@ export class ServiceService {
 
   login(user: User): Observable<boolean>{
     return this.http.post<boolean>(this.APIURL+"/"+user.name, user)
+  }
+
+  testando(signo: string, day: string): Observable<any>{
+    return this.http.post<any>(this.APIHOROSCOPO+"sign="+signo+"&day="+day, "")
   }
 
 }
