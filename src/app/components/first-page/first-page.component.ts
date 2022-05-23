@@ -9,18 +9,18 @@ import { Router } from '@angular/router';
 export class FirstPageComponent implements OnInit {
 
   signos: string[] = [
-    "aquarius",
     "aries",
-    "cancer",
-    "capricorn",
-    "gemini",
-    "leo",
-    "libra",
-    "pisces",
-    "sagittarius",
-    "scorpio",
     "taurus",
+    "gemini",
+    "cancer",
+    "leo",
     "virgo",
+    "libra",
+    "scorpio",
+    "sagittarius",
+    "capricorn",
+    "aquarius",
+    "pisces",
   ]
 
   constructor(private router: Router) {

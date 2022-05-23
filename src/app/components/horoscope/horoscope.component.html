@@ -1,6 +1,6 @@
 <div class="card-signo">
-    <div>
-        <p><b>Signo</b> {{page}}</p>
+        <div [ngStyle]="{'justify-content': 'center'}">
+        <p><b>Signo:</b> {{page}}</p>
     </div>
     <div>
         <div>
@@ -21,7 +21,7 @@
             <p><b>Lucky number:</b> {{lucky_number}}</p>
         </div>
     </div>
-    <div>
+    <div [ngStyle]="{'justify-content': 'center'}">
         <p><b>Color:</b> {{color}}</p>
     </div>
 </div>
