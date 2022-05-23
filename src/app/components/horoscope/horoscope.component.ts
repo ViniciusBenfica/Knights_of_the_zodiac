@@ -10,7 +10,7 @@ import { Horoscope } from '../interfaces/Horoscope';
 })
 export class HoroscopeComponent implements OnInit {
 
-  current_data: string = ""
+  current_date: string = ""
   description: string = ""
   compatibility: string = ""
   mood: string = ""
@@ -27,7 +27,7 @@ export class HoroscopeComponent implements OnInit {
 
   dataHoroscope(){
     this.service.dataHoroscope(this.page).subscribe((item: Horoscope) => {
-      this.current_data = item.current_data
+      this.current_date = item.current_date
       this.description = item.description
       this.compatibility = item.compatibility
       this.mood = item.mood

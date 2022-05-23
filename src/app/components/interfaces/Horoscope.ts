@@ -1,5 +1,5 @@
 export interface Horoscope{
-    current_data: string
+    current_date: string
     description: string
     compatibility: string
     mood: string
