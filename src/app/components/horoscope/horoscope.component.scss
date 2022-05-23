@@ -1,0 +1,13 @@
+.card-signo{
+    width: 400px; height: 500px;
+    // background-color: red;
+    margin: auto;
+    margin-top: 50px;
+    border: solid 5px rgb(24, 5, 66);
+    border-radius: 30px;
+
+    >div{
+        display: flex;
+        justify-content: space-between;
+    }
+}

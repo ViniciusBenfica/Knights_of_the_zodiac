@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Horoscope } from '../components/interfaces/Horoscope';
 import { User } from '../components/interfaces/User';
 
 @Injectable({
@@ -20,8 +21,11 @@ export class ServiceService {
     return this.http.post<boolean>(this.APIURL+"/"+user.name, user)
   }
 
-  testando(signo: string, day: string): Observable<any>{
-    return this.http.post<any>(this.APIHOROSCOPO+"sign="+signo+"&day="+day, "")
+  dataHoroscope(signo: string): Observable<Horoscope>{
+    return this.http.post<Horoscope>(this.APIHOROSCOPO+"?sign="+signo+"&day=today", "", {headers: {
+      'X-RapidAPI-Host': 'sameer-kumar-aztro-v1.p.rapidapi.com',
+      'X-RapidAPI-Key': '663eb91451msh3db67067f812aa3p139a3djsn0346e2540b58'
+    }})
   }
 
 }
