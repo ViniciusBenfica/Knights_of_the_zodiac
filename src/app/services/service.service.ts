@@ -14,11 +14,11 @@ export class ServiceService {
   constructor(private http: HttpClient) { }
 
   addUser(user: User): Observable<User>{
-    return this.http.post<User>(this.APIURL+"/", user)
+    return this.http.post<User>(this.APIURL+"/create", user)
   }
 
   login(user: User): Observable<boolean>{
-    return this.http.post<boolean>(this.APIURL+"/"+user.name, user)
+    return this.http.post<boolean>(this.APIURL+"/login", user)
   }
 
   dataHoroscope(signo: string): Observable<Horoscope>{

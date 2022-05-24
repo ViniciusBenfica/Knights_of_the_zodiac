@@ -29,12 +29,14 @@ export class SignUpComponent implements OnInit {
     }
 
     if(!user.email || !user.password || !user.name){
-      alert("teste")
+      alert("Preencher os dados corretamente")
     }else{
       this.service.addUser(user).subscribe(item => {
-        if(item) this.router.navigate(["/"])
-        localStorage.setItem("logado", "true")
-        localStorage.setItem("name", user.name)
+        if(item){
+          this.router.navigate(["/"])
+          localStorage.setItem("logado", "true")
+          localStorage.setItem("name", user.name)
+        }
       })
     }
 

@@ -25,14 +25,16 @@ export class LoginComponent implements OnInit {
       "password": this.password,
     }
 
-    if(!user.email || !user.name){
-      alert("teste")
+    if(!user.password || !user.name){
+      alert("Preencher os dados corretamente")
     }else{
-      this.service.addUser(user).subscribe(item => {
+      this.service.login(user).subscribe(item => {
         if(item){
            this.router.navigate(["/"])
            localStorage.setItem("logado", "true")
            localStorage.setItem("name", user.name)
+        }else{
+          alert("Login ou senha incorreto")
         }
       })
     }
