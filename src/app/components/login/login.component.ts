@@ -25,13 +25,17 @@ export class LoginComponent implements OnInit {
       "password": this.password,
     }
 
-    this.service.addUser(user).subscribe(item => {
-      if(item){
-         this.router.navigate(["/"])
-         localStorage.setItem("logado", "true")
-         localStorage.setItem("name", user.name)
-      }
-    })
+    if(!user.email || !user.name){
+      alert("teste")
+    }else{
+      this.service.addUser(user).subscribe(item => {
+        if(item){
+           this.router.navigate(["/"])
+           localStorage.setItem("logado", "true")
+           localStorage.setItem("name", user.name)
+        }
+      })
+    }
 
     this.name = ""
     this.password = ""

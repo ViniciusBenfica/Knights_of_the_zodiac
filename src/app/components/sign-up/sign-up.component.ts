@@ -28,11 +28,15 @@ export class SignUpComponent implements OnInit {
       "password": this.password,
     }
 
-    this.service.addUser(user).subscribe(item => {
-      if(item) this.router.navigate(["/"])
-      localStorage.setItem("logado", "true")
-      localStorage.setItem("name", user.name)
-    })
+    if(!user.email || !user.password || !user.name){
+      alert("teste")
+    }else{
+      this.service.addUser(user).subscribe(item => {
+        if(item) this.router.navigate(["/"])
+        localStorage.setItem("logado", "true")
+        localStorage.setItem("name", user.name)
+      })
+    }
 
     this.name = ""
     this.email = ""

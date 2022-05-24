@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Knights_of_the_zodiac';
   logado?: any = false
-  name?: any = "mec"
-
+  name?: any
+  
   constructor(private router: Router) {}
 
   ngDoCheck(): void{
