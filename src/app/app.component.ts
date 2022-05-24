@@ -13,12 +13,17 @@ export class AppComponent {
 
   constructor(private router: Router) {}
 
-  ngDoCheck(){
+  ngDoCheck(): void{
     this.logado = localStorage.getItem("logado");
     this.name = localStorage.getItem("name");
   }
 
-  returnFirstPage(){
+  returnFirstPage(): void{
     this.router.navigate(["/"])
+  }
+
+  logout(): void{
+    localStorage.setItem("logado", "");
+    localStorage.setItem("name", "");
   }
 }

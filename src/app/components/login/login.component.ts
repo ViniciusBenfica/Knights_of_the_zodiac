@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       if(item){
          this.router.navigate(["/"])
          localStorage.setItem("logado", "true")
-         localStorage.setItem("name", this.name)
+         localStorage.setItem("name", user.name)
       }
     })
 

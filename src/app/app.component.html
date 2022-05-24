@@ -9,7 +9,8 @@
     </div>
     <ng-template #isLogado>
         <div class="hello">
-            Olá {{name}}
+            <div [ngStyle]="{'line-height': '3.5'}">Olá {{name}}</div>
+            <div (click)="logout()" class="logout">SAIR</div>
         </div>
     </ng-template>
 </div>

@@ -28,8 +28,18 @@
     }
 
     .hello{
-        line-height: 3.5;
+        display: flex;
         font-size: 30px;
+    }
+
+    .logout{
+        margin-top: 35px;
+        width: 100px; height: 40px;
+        margin-left: 10px;
+        border-radius: 20px;
+        line-height: 1.5;
+        background-color: rgb(151, 19, 19);
+        font-size: 25px;
     }
 
 }
