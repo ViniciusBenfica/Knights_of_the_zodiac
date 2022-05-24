@@ -3,9 +3,14 @@
         <img width="80px" src="/assets/horoscope.png">
         <div>Horóscopo hoje</div>
     </div>
-    <div>
+    <div *ngIf="!logado; else isLogado">
         <div routerLink="/login" class="button-header">LOGIN</div>
         <div routerLink="/sign-up" class="button-header">REGISTER</div>
     </div>
+    <ng-template #isLogado>
+        <div class="hello">
+            Olá {{name}}
+        </div>
+    </ng-template>
 </div>
 <router-outlet></router-outlet>

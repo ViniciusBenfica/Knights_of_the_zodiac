@@ -10,9 +10,9 @@ import { User } from '../interfaces/User';
 })
 export class SignUpComponent implements OnInit {
 
-  name: string = ""
-  email: string = ""
-  password: string = ""
+  name!: string
+  email!: string
+  password!: string
 
   constructor(private service: ServiceService, private router: Router) {
   }
@@ -30,6 +30,8 @@ export class SignUpComponent implements OnInit {
 
     this.service.addUser(user).subscribe(item => {
       if(item) this.router.navigate(["/"])
+      localStorage.setItem("logado", "true")
+      localStorage.setItem("name", user.name)
     })
 
     this.name = ""
