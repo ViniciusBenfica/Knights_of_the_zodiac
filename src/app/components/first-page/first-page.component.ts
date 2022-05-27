@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceService } from 'src/app/services/service.service';
+
 
 @Component({
   selector: 'app-first-page',
@@ -7,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./first-page.component.scss']
 })
 export class FirstPageComponent implements OnInit {
+
+  name: any = ""
 
   signos: string[] = [
     "aries",
@@ -23,14 +27,15 @@ export class FirstPageComponent implements OnInit {
     "pisces",
   ]
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private service: ServiceService) {
   }
 
   ngOnInit(): void {
   }
 
-  goingToPage(signo: string){
+  goingToPage(signo: string): void{
     this.router.navigate(["horoscope/"+signo])
   }
+
 
 }

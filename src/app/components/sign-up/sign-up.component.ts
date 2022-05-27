@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/services/service.service';
-import { User } from '../interfaces/User';
+import { CreateUser } from '../interfaces/User';
 
 @Component({
   selector: 'app-sign-up',
@@ -13,6 +13,7 @@ export class SignUpComponent implements OnInit {
   name!: string
   email!: string
   password!: string
+  date!: string
 
   constructor(private service: ServiceService, private router: Router) {
   }
@@ -22,13 +23,14 @@ export class SignUpComponent implements OnInit {
 
   addUser(): void{
 
-    var user: User = {
-      "name": this.name,
-      "email": this.email,
-      "password": this.password,
+    var user: CreateUser = {
+      name: this.name,
+      email: this.email,
+      password: this.password,
+      date: this.date
     }
 
-    if(!user.email || !user.password || !user.name){
+    if(!user.email || !user.password || !user.name || !user.date){
       alert("Preencher os dados corretamente")
     }else{
       this.service.addUser(user).subscribe(item => {
@@ -43,6 +45,7 @@ export class SignUpComponent implements OnInit {
     this.name = ""
     this.email = ""
     this.password = ""
+    this.date = ""
 
   }
 

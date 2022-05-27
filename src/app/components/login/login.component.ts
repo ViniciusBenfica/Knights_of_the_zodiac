@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/services/service.service';
-import { User } from '../interfaces/User';
+import { LoginUser } from '../interfaces/User';
 
 @Component({
   selector: 'app-login',
@@ -20,9 +20,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void{
-    var user: User = {
-      "name": this.name,
-      "password": this.password,
+    
+    var user: LoginUser = {
+      name: this.name,
+      password: this.password,
     }
 
     if(!user.password || !user.name){

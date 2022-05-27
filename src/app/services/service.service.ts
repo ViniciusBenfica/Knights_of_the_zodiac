@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Horoscope } from '../components/interfaces/Horoscope';
-import { User } from '../components/interfaces/User';
+import { CreateUser, LoginUser } from '../components/interfaces/User';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +13,11 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
-  addUser(user: User): Observable<User>{
-    return this.http.post<User>(this.APIURL+"/create", user)
+  addUser(user: CreateUser): Observable<boolean>{
+    return this.http.post<boolean>(this.APIURL+"/create", user)
   }
 
-  login(user: User): Observable<boolean>{
+  login(user: LoginUser): Observable<boolean>{
     return this.http.post<boolean>(this.APIURL+"/login", user)
   }
 
