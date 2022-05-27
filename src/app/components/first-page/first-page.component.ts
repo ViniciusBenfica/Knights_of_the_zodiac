@@ -48,8 +48,7 @@ export class FirstPageComponent implements OnInit {
       alert("Precisa estar logado")
     }else{
       this.service.getKnights(user).subscribe(item  => {
-        console.log(item.signo)
-        
+        this.router.navigate(["/knights/"+item.signo])
       })
     }
   }

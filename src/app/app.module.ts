@@ -8,7 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { HoroscopeComponent } from './components/horoscope/horoscope.component';
-import { HttpClientModule } from "@angular/common/http"
+import { HttpClientModule } from "@angular/common/http";
+import { KnightsComponent } from './components/knights/knights.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from "@angular/common/http"
     FirstPageComponent,
     SignUpComponent,
     LoginComponent,
-    HoroscopeComponent
+    HoroscopeComponent,
+    KnightsComponent
   ],
   imports: [
     BrowserModule,
