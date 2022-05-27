@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Horoscope } from '../components/interfaces/Horoscope';
-import { CreateUser, LoginUser } from '../components/interfaces/User';
+import { CreateUser, LoginUser, GetSign } from '../components/interfaces/User';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +26,10 @@ export class ServiceService {
       'X-RapidAPI-Host': 'sameer-kumar-aztro-v1.p.rapidapi.com',
       'X-RapidAPI-Key': '663eb91451msh3db67067f812aa3p139a3djsn0346e2540b58'
     }})
+  }
+
+  getKnights(user: GetSign): Observable<any>{
+    return this.http.post<Object>(this.APIURL+"/getKnights", user)
   }
 
 }

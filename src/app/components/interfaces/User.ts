@@ -7,7 +7,9 @@ export interface CreateUser{
 
 export interface LoginUser{
     name: string,
-    password?: string,
-    email?: string,
-    date?: string
+    password: string,
+}
+
+export interface GetSign{
+    name: string,
 }
